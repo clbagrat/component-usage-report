@@ -1,0 +1,28 @@
+{
+  "name": "component-usage-report",
+  "version": "0.0.1",
+  "description": "Tool that will generate a usage report of your react components",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd node index.js --outputFormat=html "
+  },
+  "type": "module",
+  "author": "clbagrat",
+  "license": "ISC",
+  "dependencies": {
+    "acorn": "^8.5.0",
+    "acorn-jsx": "^5.3.2",
+    "acorn-jsx-walk": "^2.0.0",
+    "acorn-walk": "^8.2.0",
+    "args-parser": "^1.3.0",
+    "fs": "^0.0.1-security",
+    "http-server": "^13.0.2",
+    "open": "^8.3.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
