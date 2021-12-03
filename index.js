@@ -3,6 +3,8 @@ import { Parser } from "acorn";
 import jsx from "acorn-jsx";
 import argsParser from "args-parser";
 
+import { argumentsPromise } from "./arguments/index.js";
+
 import { getTargetFiles } from "./getTargetFiles.js";
 import { walk } from "./walk.js";
 
@@ -17,7 +19,9 @@ const outputsPerFormat = {
   "html": htmlOutput
 };
 
+
 (async function () {
+  const args = await argumentsPromise;
   const names = await getTargetFiles(TARGET, IMPORT_PATH); 
   const result = {};
   names.forEach(name => {
